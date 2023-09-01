@@ -27,5 +27,6 @@ jobs:
     # ./Setup do Job
     - run: ls -la
     - run: cd ./frontend && yarn install && yarn test && ls -la
+    - run: cd ..
     - run: cd ./backend && yarn install && yarn test && ls -la
    
