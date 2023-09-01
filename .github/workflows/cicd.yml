@@ -10,6 +10,11 @@ on:
 
 jobs:
     run-test:
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          node-version: [12.x, 14.x,16.x]
+
     
     
     steps:
@@ -20,9 +25,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     # ./Setup do Job
-    - run: ls -la
-    - run: | 
-        cd ./frontend
-        yarn install
-        yarn test
-        ls -la
+    - run: yarn install
+    - run: yarn test
