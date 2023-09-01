@@ -9,11 +9,11 @@ on:
     branches: [ main ]
 
 jobs:
-    run-test:
-      runs-on: ubuntu-latest
-      strategy:
-        matrix:
-          node-version: [12.x, 14.x,16.x]
+  run-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x,16.x]
 
     
     
